@@ -2,7 +2,7 @@
   <img width="200" src="https://i.pinimg.com/736x/b1/f7/5e/b1f75ec4b9a69ad6d008e880fe12cd23.jpg">
 </p>
 
-<h1 style="border-bottom:none;text-align:center;">The test work made for ITCraft</h1>
+<h1 style="border-bottom:none;text-align:center;">The test work made for Dev-Pro</h1>
 
 ---
 
