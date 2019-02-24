@@ -1,0 +1,15 @@
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin font($size, $family ,$color) {
+    font-size: calculateRem($size);
+    font-family: $family;
+    color: $color;
+    font-weight: normal;
+}
+
+@mixin bg($angle, $thin-line, $bold-line) {
+    background-image: repeating-linear-gradient($angle, $thin-line 0px, $thin-line 1px, $bold-line 1px, $bold-line 5px);
+}

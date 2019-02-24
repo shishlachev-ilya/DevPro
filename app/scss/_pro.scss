@@ -1,0 +1,111 @@
+.pro {
+
+    @media screen and ($m-extra-small) {
+        padding: 10px 0 50px;
+    }
+
+    @media screen and ($m-small) {
+        padding: 10px 0 50px;
+    }
+
+    @media screen and ($m-medium) {
+        padding: 49px 0;
+    }
+
+    &-wrap {
+        display: flex;
+
+        @media screen and ($m-extra-small) {
+            flex-direction: column;
+        }
+
+        @media screen and ($m-small) {
+            flex-direction: column;
+        }
+
+        @media screen and ($m-medium) {
+            flex-direction: row;
+        }
+
+        &__col {
+
+            @media screen and ($m-extra-small) {
+                width: 100%;
+            }
+
+            @media screen and ($m-small) {
+                width: 100%;
+            }
+
+            @media screen and ($m-medium) {
+                width: 33.33%;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and ($m-extra-small) {
+            margin: 0 0 40px;
+        }
+
+        @media screen and ($m-small) {
+            margin: 0 0 40px;
+        }
+
+        @media screen and ($m-medium) {
+            margin: 0;
+        }
+
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 30px;
+            height: 30px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        &__head {
+            margin: 8px 0 -1px;
+
+            a {
+                @extend %default-link;
+                @include font(24px, $f-bree-serif, $c-dark);
+                text-transform: uppercase;
+
+                span {
+                    color: $c-green;
+                }
+            }
+        }
+
+        &__content {
+            p {
+                margin: 0;
+
+                @include font(16px, $f-bree-serif, $c-dark);
+                text-align: center;
+                line-height: 23px;
+            }
+        }
+
+        &__link {
+            @extend %more-wrap;
+            margin: 7px 0 0;
+
+            a {
+                @extend %more-link;
+                @extend %default-link;
+                @include font(16px, $f-open-sans, $c-white);
+            }
+        }
+    }
+}

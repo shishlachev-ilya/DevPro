@@ -1,0 +1,197 @@
+.post {
+    position: relative;
+
+    padding: 20px 0 40px;
+
+    &:before {
+        @media screen and ($m-small) {
+            content: "";
+            position: absolute;
+            top: 29px;
+            left: 0;
+
+            height: 78px;
+            width: 100%;
+
+            @include bg(55deg, #000000, #333333);
+        }
+    }
+
+    &:after {
+        @media screen and ($m-small) {
+            content: "";
+            position: absolute;
+
+            left: 0;
+
+            height: 78px;
+            width: 100%;
+
+            @include bg(55deg, #000000, #333333);
+        }
+
+        @media screen and ($m-extra-small) {
+            top: 339px;
+            bottom: auto;
+        }
+
+        @media screen and ($m-small) {
+            top: 339px;
+            bottom: auto;
+        }
+
+        @media screen and ($m-medium) {
+            bottom: 0;
+        }
+
+    }
+
+    &__line {
+        display: none;
+
+        @media screen and ($m-small) {
+            position: absolute;
+            top: 183px;
+            left: 0;
+
+            height: 78px;
+            width: 100%;
+
+            @include bg(55deg, #000000, #333333);
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+
+        @media screen and ($m-extra-small) {
+            flex-direction: column;
+        }
+
+        @media screen and ($m-small) {
+            flex-direction: column;
+        }
+
+        @media screen and ($m-medium) {
+            flex-direction: row;
+        }
+
+        &__col {
+            &:nth-child(1) {
+                @media screen and ($m-extra-small) {
+                    width: 100%;
+                    order: 2;
+                }
+
+                @media screen and ($m-small) {
+                    width: 100%;
+                    order: 2;
+                }
+
+                @media screen and ($m-medium) {
+                    width: 50%;
+                    order: 1;
+                }
+            }
+
+            &:nth-child(2) {
+                @media screen and ($m-extra-small) {
+                    width: 100%;
+                    order: 1;
+                }
+
+                @media screen and ($m-small) {
+                    width: 100%;
+                    order: 1;
+                }
+
+                @media screen and ($m-medium) {
+                    width: 50%;
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    &-info {
+        position: relative;
+        z-index: 1;
+
+        @media screen and ($m-extra-small) {
+            margin: 29px 0 0;
+        }
+
+        @media screen and ($m-small) {
+            margin: 29px 0 0;
+        }
+
+        @media screen and ($m-medium) {
+            margin: 29px 89px 0 0;
+        }
+
+        &__title {
+            display: inline;
+            margin: 0;
+
+            span {
+                display: inline-block;
+                margin: 0 0 3px;
+
+                @include font(24px, $f-bree-serif, $c-green);
+                line-height: 28px;
+
+                background-color: $c-white;
+            }
+        }
+
+        &__text {
+            padding: 5px;
+            margin: 9px 0;
+
+            @include font(16px, $f-open-sans, $c-dark);
+            line-height: 24px;
+
+            background-color: $c-white;
+
+            a {
+                color: $c-green;
+
+                &:hover {
+                    color: $c-gray;
+                }
+            }
+        }
+
+        &__more {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+
+            @extend %more-wrap;
+        }
+
+        &__link {
+            @extend %more-link;
+            @extend %default-link;
+            @include font(16px, $f-open-sans, $c-white);
+        }
+    }
+
+    &-video {
+        position: relative;
+        z-index: 1;
+
+        padding-top: 64%;
+        margin: 25px 0 0;
+        height: 0;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+%default-link {
+    text-decoration: none;
+}
+
+%default-list {
+    padding: 0;
+    margin: 0;
+}
+
+%more-wrap {
+    display: flex;
+    width: 60px;
+    height: 20px;
+
+    background-color: $c-green;
+
+    &:hover {
+        background-color: $c-dark;
+    }
+}
+
+%more-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: -1px 0 0;
+}

@@ -1,0 +1,12 @@
+//common style
+@import "common/variables";
+@import "common/abstract";
+@import "common/mixin";
+@import "common/fonts";
+@import "common/basic";
+
+//other style
+@import "header";
+@import "post";
+@import "pro";
+@import "footer";
